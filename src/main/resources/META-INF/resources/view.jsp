@@ -20,7 +20,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <style>
 #tbl-politicas .header-cuervo{
-  background: black;
+  background: #181818;
   color: white;
   font-family: "Source Sans Pro";
 }
@@ -29,12 +29,12 @@
 }
 
 #tbl-politicas tbody tr{
-  background: black;
+  background: #181818;
   color: white;
 }
 
 #tbl-politicas .group td {
-    background: black !important;
+    background: #181818 !important;
     padding: 10px 32px !important;
     font-size: 16px;
     color: #CCB874 !important;
@@ -80,6 +80,8 @@
 }
 </style>
 <div class="container">
+	<div class="row">
+		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
             <tr class="header-cuervo">
@@ -127,6 +129,8 @@
         </tbody>
     </table>
     </div>
+    </div>
+</div>
     <script>
     $(document).ready(function() {
     	 var collapsedGroups = {};
