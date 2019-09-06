@@ -78,9 +78,21 @@
     margin: 1px;
     padding: 7px 16px;
 }
+#listaPrecios {
+	background: transparent;
+}
+
 </style>
+<div class="tituloSeccion-contenedor d-flex align-items-center justify-content-center">
+	<img src='<%=request.getContextPath()+"/img/ListaPreciosBanner.png" %>' alt="" class="img-fliud">
+	<div id="listaPrecios" class="mascara-tituloSeccion"></div>
+	<h1 class="tituloSeccion position-absolute">
+		Lista de Precios
+	</h1>
+</div>
 <div class="container">
 	<div class="row">
+	 
 		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
