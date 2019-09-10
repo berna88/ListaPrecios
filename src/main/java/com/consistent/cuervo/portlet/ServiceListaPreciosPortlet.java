@@ -25,4 +25,40 @@ import org.osgi.service.component.annotations.Component;
 	service = Portlet.class
 )
 public class ServiceListaPreciosPortlet extends MVCPortlet {
+	
+	String jsonExample = "{\n" + 
+			"  \"productos\":\n" + 
+			"  [\n" + 
+			"    {\n" + 
+			"      \"category\":\"Tequila\",\n" + 
+			"      \"nombre\": \"kraken Ghost\",\n" + 
+			"      \"material\": \"8159\",\n" + 
+			"      \"descripcion\": \"Ron the kraken ghost 12/750ml 35% Alc. V\",\n" + 
+			"      \"capacidad\": \"Botella de 700ml\",\n" + 
+			"      \"precioNormal\": \"$100.00\",\n" + 
+			"      \"precioBanquete\": \"$0.00\",\n" + 
+			"      \"precioEspecial\": \"$0.00\"\n" + 
+			"    },\n" + 
+			"    {\n" + 
+			"      \"category\":\"Tequila\",\n" + 
+			"      \"nombre\": \"kraken Ghost\",\n" + 
+			"      \"material\": \"8159\",\n" + 
+			"      \"descripcion\": \"Ron the kraken ghost 12/750ml 35% Alc. V\",\n" + 
+			"      \"capacidad\": \"Botella de 700ml\",\n" + 
+			"      \"precioNormal\": \"$100.00\",\n" + 
+			"      \"precioBanquete\": \"$0.00\",\n" + 
+			"      \"precioEspecial\": \"$0.00\"\n" + 
+			"    },\n" + 
+			"    {\n" + 
+			"      \"category\":\"Tequila\",\n" + 
+			"      \"nombre\": \"kraken Ghost\",\n" + 
+			"      \"material\": \"8159\",\n" + 
+			"      \"descripcion\": \"Ron the kraken ghost 12/750ml 35% Alc. V\",\n" + 
+			"      \"capacidad\": \"Botella de 700ml\",\n" + 
+			"      \"precioNormal\": \"$100.00\",\n" + 
+			"      \"precioBanquete\": \"$0.00\",\n" + 
+			"      \"precioEspecial\": \"$0.00\"\n" + 
+			"    }\n" + 
+			"  ]\n" + 
+			"}" ;
 }
