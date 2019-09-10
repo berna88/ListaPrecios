@@ -84,7 +84,16 @@
 #listaPrecios {
 	background: transparent;
 }
-
+.boton-listaPrecios{
+	margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 5px 25px;
+    background: transparent;
+    color: #CCB874;
+    border-color: #CCB874;
+    float: right;
+    margin-right: 1.1rem;
+}
 </style>
 
 <div class="container">
@@ -94,6 +103,11 @@
 		<h1 class="tituloSeccion position-absolute">
 			Lista de Precios
 		</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<button class="boton-listaPrecios" type="submit">Descargar lista de precios</button>
+		</div>
 	</div>
 	<div class="row">
 		<div class="table-responsive">
@@ -142,6 +156,7 @@
     	                "searchable": false
     	            }
     	        ],
+    	        
     	      rowGroup: {
     	        // Uses the 'row group' plugin
     	        dataSrc: 2,
