@@ -93,8 +93,6 @@
 </div>
 <div class="container">
 	<div class="row">
-	<%=request.getContextPath() %>
-	<img alt="" src="">
 		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
