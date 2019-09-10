@@ -1,6 +1,7 @@
 <%@ include file="/init.jsp" %>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+
     <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
     <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 
@@ -81,6 +82,8 @@
 </style>
 <div class="container">
 	<div class="row">
+	<%=request.getContextPath() %>
+	<img alt="" src="">
 		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
