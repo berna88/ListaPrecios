@@ -2,6 +2,11 @@ Bundle-Name: ListaPrecios
 Bundle-SymbolicName: com.consistent.cuervo
 Bundle-Version: 1.0.0
 Export-Package: com.consistent.cuervo.constants
+Bundle-ClassPath:\
+.,\
+lib/gson.jar
+-includeresource:\
+lib/gson.jar=gson-2.8.5.jar
 -contract: JavaPortlet,JavaServlet
 -jsp: *.jsp,*.jspf
 -plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin

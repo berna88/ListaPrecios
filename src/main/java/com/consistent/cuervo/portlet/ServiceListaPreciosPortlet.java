@@ -6,11 +6,14 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
-
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 
 import javax.portlet.Portlet;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -31,6 +34,15 @@ import org.osgi.service.component.annotations.Component;
 	service = Portlet.class
 )
 public class ServiceListaPreciosPortlet extends MVCPortlet {
+	
+	@Override
+		public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
+				throws IOException, PortletException {
+			// TODO Auto-generated method stub
+		System.out.println("Hola");
+			super.doView(renderRequest, renderResponse);
+			
+		}
 
 	public void getProductos(){
 		String json = "[\n" + 
