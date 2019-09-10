@@ -16,6 +16,7 @@ public class Producto {
 	private String precioNormal;
 	private String precioBanquete;
 	private String precioEspecial;
+	private String json;
 	
 	public String getCategory() {
 		return category;
@@ -65,6 +66,13 @@ public class Producto {
 	public void setPrecioEspecial(String precioEspecial) {
 		this.precioEspecial = precioEspecial;
 	}
+	
+	public String getJson() {
+		return json;
+	}
+	public void setJson(String json) {
+		this.json = json;
+	}
 	public Producto(String category, String nombre, String material, String descripcion, String capacidad,
 			String precioNormal, String precioBanquete, String precioEspecial) {
 		super();
@@ -77,11 +85,14 @@ public class Producto {
 		this.precioBanquete = precioBanquete;
 		this.precioEspecial = precioEspecial;
 	}
-	public List<Producto> getProductos(String json){
+	public Producto(String json) {
+		this.json = json;
+	}
+	public List<Producto> getProductos(){
 		Gson gson = new Gson();
 	    Type type = new TypeToken<List<Producto>>(){}.getType();
 	    List<Producto> productos = gson.fromJson(json, type);
-		return productos;
+	return productos;
 	}
 	
 }

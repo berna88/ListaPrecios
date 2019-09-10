@@ -1,4 +1,6 @@
 <%@ include file="/init.jsp" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 
@@ -84,21 +86,22 @@
 }
 
 </style>
-<div class="tituloSeccion-contenedor d-flex align-items-center justify-content-center">
+
+<div class="container">
+	<div class="tituloSeccion-contenedor d-flex align-items-center justify-content-center">
 	<img src='<%=request.getContextPath()+"/img/ListaPreciosBanner.png" %>' alt="" class="img-fliud">
 	<div id="listaPrecios" class="mascara-tituloSeccion"></div>
-	<h1 class="tituloSeccion position-absolute">
-		Lista de Precios
-	</h1>
-</div>
-<div class="container">
+		<h1 class="tituloSeccion position-absolute">
+			Lista de Precios
+		</h1>
+	</div>
 	<div class="row">
 		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
             <tr class="header-cuervo">
                 <th>Material</th>
-                <th>Descripci�n</th>
+                <th>Descripcion</th>
                 <th>Capacidad</th>
                 <th>Precio Normal</th>
                 <th>Precio Banquete</th>
@@ -106,38 +109,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
-                <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Tequila</td>
-                <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
-            </tr>
-            <tr>
-                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
-                <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Tequila</td>
-                <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
-            </tr>
-            <tr>
-                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
-                <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Tequila</td>
-                <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
-            </tr>
-            <tr>
-                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
-                <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Vodka</td>
-                <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
-            </tr>
+        	<c:forEach var="nom" items="${Productos}">
+	        	<tr>
+	                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product"><c:out value="${nom.nombre}"></c:out></h4><c:out value="${nom.material}"></c:out></td>
+	                <td class="td-politicas top"><c:out value="${nom.descripcion}"></c:out></td>
+	                <td class="td-politicas top"><c:out value="${nom.category}"></c:out></td>
+	                <td class="td-politicas top"><c:out value="${nom.precioNormal}"></c:out></td>
+	                <td class="td-politicas top" data-order="1303689600"><c:out value="${nom.precioBanquete}"></c:out></td>
+	                <td class="td-politicas top" data-order="320800"><c:out value="${nom.precioEspecial}"></c:out></td>
+	            </tr>
+			</c:forEach>
         </tbody>
     </table>
     </div>
