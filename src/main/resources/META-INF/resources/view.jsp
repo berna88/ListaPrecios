@@ -1,14 +1,15 @@
 <%@ include file="/init.jsp" %>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
+
     <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
     <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
 
     <link href="https://cdn.datatables.net/rowgroup/1.0.2/css/rowGroup.dataTables.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.datatables.net/rowgroup/1.0.2/js/dataTables.rowGroup.min.js"></script>
-    
+
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.js"></script>
-    
+
     <link rel="stylesheet" href="css/datatable.css">
     <script type="text/javascript" src="js/datatable.js"> </script>
     <!-- Latest compiled and minified CSS -->
@@ -92,13 +93,12 @@
 </div>
 <div class="container">
 	<div class="row">
-	 
 		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
             <tr class="header-cuervo">
                 <th>Material</th>
-                <th>Descripción</th>
+                <th>Descripciï¿½n</th>
                 <th>Capacidad</th>
                 <th>Precio Normal</th>
                 <th>Precio Banquete</th>
