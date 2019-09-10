@@ -7,9 +7,9 @@
 
     <link href="https://cdn.datatables.net/rowgroup/1.0.2/css/rowGroup.dataTables.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.datatables.net/rowgroup/1.0.2/js/dataTables.rowGroup.min.js"></script>
-    
+
     <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.js"></script>
-    
+
     <link rel="stylesheet" href="css/datatable.css">
     <script type="text/javascript" src="js/datatable.js"> </script>
     <!-- Latest compiled and minified CSS -->
@@ -79,7 +79,18 @@
     margin: 1px;
     padding: 7px 16px;
 }
+#listaPrecios {
+	background: transparent;
+}
+
 </style>
+<div class="tituloSeccion-contenedor d-flex align-items-center justify-content-center">
+	<img src='<%=request.getContextPath()+"/img/ListaPreciosBanner.png" %>' alt="" class="img-fliud">
+	<div id="listaPrecios" class="mascara-tituloSeccion"></div>
+	<h1 class="tituloSeccion position-absolute">
+		Lista de Precios
+	</h1>
+</div>
 <div class="container">
 	<div class="row">
 	<%=request.getContextPath() %>
@@ -89,7 +100,7 @@
         <thead>
             <tr class="header-cuervo">
                 <th>Material</th>
-                <th>Descripción</th>
+                <th>Descripciï¿½n</th>
                 <th>Capacidad</th>
                 <th>Precio Normal</th>
                 <th>Precio Banquete</th>
