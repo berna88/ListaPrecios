@@ -1,6 +1,15 @@
 <%@ include file="/init.jsp" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+
+
+<portlet:defineObjects />
+
+<liferay-portlet:resourceURL var="resourceUrl1">
+	<liferay-portlet:param  name="pdf" value="descargar"/>
+</liferay-portlet:resourceURL>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 
@@ -106,9 +115,10 @@
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<button class="boton-listaPrecios" type="submit">Descargar lista de precios</button>
+			<button onclick="callServeResource()" class="boton-listaPrecios" type="submit">Descargar lista de precios</button>
 		</div>
 	</div>
+	
 	<div class="row">
 		<div class="table-responsive">
       <table id="tbl-politicas" class="display" style="width:100%">
@@ -139,6 +149,23 @@
     </div>
 </div>
     <script>
+    function callServeResource(){
+        AUI().use('aui-io-request', function(A){
+            A.io.request('${resourceUrl1}', {
+                   method: 'post',
+                   data: {
+                	   <portlet:namespace />param2: 'value2',
+                   },
+                   on: {
+                       	success: function() {
+                        alert(this.get('responseData'));
+                       }
+                  }
+            });
+     
+        });
+    }
+    
     $(document).ready(function() {
     	 var collapsedGroups = {};
 
