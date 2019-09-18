@@ -4,9 +4,14 @@ Bundle-Version: 1.0.0
 Export-Package: com.consistent.cuervo.constants
 Bundle-ClassPath:\
 .,\
-lib/gson.jar
+lib/gson.jar,\
+lib/client.jar,\
+lib/common.jar
 -includeresource:\
-lib/gson.jar=gson-2.8.5.jar
+lib/gson.jar=gson-2.8.5.jar,\
+lib/client.jar=org.apache.oltu.oauth2.client-1.0.1.jar,\
+lib/common.jar=org.apache.oltu.oauth2.common-1.0.1.jar
+
 -contract: JavaPortlet,JavaServlet
 -jsp: *.jsp,*.jspf
 -plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin

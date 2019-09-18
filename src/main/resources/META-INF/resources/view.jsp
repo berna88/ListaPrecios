@@ -46,7 +46,7 @@
         <tbody>
         	<c:forEach var="nom" items="${Productos}">
 	        	<tr>
-	                <td class="td-politicas"><h4 class="name-product"><c:out value="${nom.nombre}"></c:out></h4><c:out value="${nom.material}"></c:out></td>
+	                <td class="td-politicas"><h5 class="name-product"><c:out value="${nom.nombre}"></c:out></h5><c:out value="${nom.material}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.descripcion}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.category}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.precioNormal}"></c:out></td>
@@ -67,4 +67,3 @@
 <script src='<%=request.getContextPath()+"/js/api.js" %>'></script>
 <script src='<%=request.getContextPath()+"/js/datatable-custom.js" %>'></script>
 <script src='<%=request.getContextPath()+"/js/portlet.js" %>'></script>
-

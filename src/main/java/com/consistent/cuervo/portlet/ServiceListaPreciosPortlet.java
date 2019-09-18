@@ -1,10 +1,13 @@
 package com.consistent.cuervo.portlet;
 
+import com.consistent.cuervo.conection.Conection;
 import com.consistent.cuervo.constants.ServiceListaPreciosPortletKeys;
 import com.consistent.cuervo.models.Producto;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.WebKeys;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -42,7 +45,7 @@ public class ServiceListaPreciosPortlet extends MVCPortlet {
 		public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 				throws IOException, PortletException {
 		log.info("<---- Resouce Method ---->");
-		log.info(resourceRequest.getParameter("pdf"));
+		
 		PrintWriter out = resourceResponse.getWriter();
 		out.println("Resource URL is created with Liferay Tag - liferay-portlet:resourceURL");
 		out.flush();
@@ -55,8 +58,8 @@ public class ServiceListaPreciosPortlet extends MVCPortlet {
 				throws IOException, PortletException {
 		log.info("<--- render --->");
 			try {
-				
-				Producto producto = new Producto(ServiceListaPreciosPortletKeys.JSON_EXAMPLE);
+				Conection conection = new Conection(ServiceListaPreciosPortletKeys.CLIENT_ID, ServiceListaPreciosPortletKeys.CLIENT_SECRET, renderRequest);
+				Producto producto = new Producto(conection.getJSON());
 				renderRequest.setAttribute("Productos", producto.getProductos());
 			} catch (Exception e) {
 				// TODO: handle exception
