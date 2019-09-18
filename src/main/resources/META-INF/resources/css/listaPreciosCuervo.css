@@ -1,0 +1,76 @@
+table.dataTable tr.group td{
+	font-weight:bold;
+	background-color:#e0e0e0;
+	}
+#tbl-politicas .header-cuervo{
+  background: #181818;
+  color: white;
+  font-family: "Source Sans Pro";
+}
+#tbl-politicas thead tr th{
+  text-align: center;
+}
+
+#tbl-politicas tbody tr{
+  background: #181818;
+  color: white;
+}
+
+#tbl-politicas .group td {
+    background: #181818 !important;
+    padding: 10px 32px !important;
+    font-size: 16px;
+    color: #CCB874 !important;
+    border-style: none;
+    /* border-color: #808080 !important; */
+    font-family: "Source Sans Pro" !important;
+    text-transform: uppercase;
+    border: none;
+}
+
+
+#tbl-politicas .group td:hover{
+  border-color: #CCB874 !important;
+  color: #CCB874 !important;
+}
+#tbl-politicas tbody td {
+  border-top: .5px solid #808080;
+  padding: 14px 8px;
+}
+#tbl-politicas tbody .td-politicas {
+  text-align: center;
+}
+#tbl-politicas .icon-politicas{
+  float: right;
+}
+#tbl-politicas .top{
+  padding-top: 54px !important;
+}
+#tbl-politicas .name-product{
+  color: #CCB874;
+}
+
+#tbl-politicas tbody .collapsed td {
+  border-color: #808080;
+  color:#808080 !important;
+  margin: 5%;
+}
+
+#tbl-politicas tr td .head {
+    border: 1px solid;
+    margin: 1px;
+    padding: 7px 16px;
+}
+#listaPrecios {
+	background: transparent;
+}
+.boton-listaPrecios{
+	margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 5px 25px;
+    background: transparent;
+    color: #CCB874;
+    border-color: #CCB874;
+    float: right;
+    margin-right: 1.1rem;
+}
