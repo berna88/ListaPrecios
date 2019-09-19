@@ -12,17 +12,18 @@
 </liferay-portlet:resourceURL>
 
 <!-- Hoja de estilos datatables -->
-<link href='<%=request.getContextPath()+"/css/jquery.dataTables.css" %>' rel="stylesheet" type="text/css" />
+<link href='<%=request.getContextPath()+"/css/jquery.dataTables.min.css" %>' rel="stylesheet" type="text/css" />
 <!-- Hoja de estilos personalizada -->
 <link rel="stylesheet" href='<%=request.getContextPath()+"/css/listaPreciosCuervo.css" %>'>
 
 <div class="container">
 	<div class="tituloSeccion-contenedor d-flex align-items-center justify-content-center">
-	<img src='<%=request.getContextPath()+"/img/ListaPreciosBanner.png" %>' alt="" class="img-fliud">
-	<div id="listaPrecios" class="mascara-tituloSeccion"></div>
+		<img src='<%=request.getContextPath()+"/img/ListaPreciosBanner.jpg" %>' alt="" class="img-fliud">
+		<div id="listaPrecios" class="mascara-tituloSeccion"></div>
 		<h1 class="tituloSeccion position-absolute">
 			Lista de Precios
 		</h1>
+		<p id="fecha"></p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
@@ -32,11 +33,12 @@
 	
 	<div class="row">
 		<div class="table-responsive">
-      <table id="tbl-politicas" class="display" style="width:100%">
+      <table id="tbl-politicas" class="display" style="width:100%;padding:0px 32px">
         <thead>
             <tr class="header-cuervo">
                 <th>Material</th>
                 <th>Descripcion</th>
+                <th>Categoria</th>
                 <th>Capacidad</th>
                 <th>Precio Normal</th>
                 <th>Precio Banquete</th>
@@ -46,13 +48,16 @@
         <tbody>
         	<c:forEach var="nom" items="${Productos}">
 	        	<tr>
-	                <td class="td-politicas"><h5 class="name-product"><c:out value="${nom.nombre}"></c:out></h5><c:out value="${nom.material}"></c:out></td>
+	                <td class="td-politicas"><h5 class="name-product"><c:out value="${nom.nombre.toUpperCase()}"></c:out></h5><c:out value="${nom.material}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.descripcion}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.category}"></c:out></td>
+	                <td class="td-politicas top"><c:out value="${nom.capacidad}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.precioNormal}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.precioBanquete}"></c:out></td>
-	                <td class="td-politicas top"><c:out value="${nom.precioEspecial}"></c:out></td>
+	                <td class="td-politicas top"><c:out value="${nom.precioEspecial}"></c:out>
+	                
 	            </tr>
+	            
 			</c:forEach>
         </tbody>
     </table>
@@ -60,10 +65,58 @@
     </div>
 </div>
 
-<script src='<%=request.getContextPath()+"/js/jquery-1.11.3.min.js" %>'></script>
-<script src='<%=request.getContextPath()+"/js/jquery.dataTables.js" %>'></script>
+<script src='<%=request.getContextPath()+"/js/jquery.dataTables.min.js" %>'></script>
 <script src='<%=request.getContextPath()+"/js/dataTables.rowGroup.min.js" %>'></script>
 <script src='<%=request.getContextPath()+"/js/dataTables.buttons.js" %>'></script>
-<script src='<%=request.getContextPath()+"/js/api.js" %>'></script>
 <script src='<%=request.getContextPath()+"/js/datatable-custom.js" %>'></script>
-<script src='<%=request.getContextPath()+"/js/portlet.js" %>'></script>
+<script>
+var today = new Date();
+var dia = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var ano = today.getFullYear();
+
+var mes = getMes(mm);
+
+today = 'Visualización el '+ dia + ' de ' + mes + ' del ' + ano;
+document.getElementById('fecha').innerHTML = today;
+function getMes(mes){
+	switch (mes) {
+	case "01": 
+		return "Enero";
+	break;
+	case "02": 
+		return "Febrero";
+	break;
+	case "03": 
+		return "Marzo";
+	break;
+	case "04": 
+		return "Abril";
+	break;
+	case "05": 
+		return "Mayo";
+	break;
+	case "06": 
+		return "Junio";
+	break;
+	case "07": 
+		return "Julio";
+	break;
+	case "08": 
+		return "Agosto";
+	break;
+	case "09": 
+		return "Septiembre";
+	break;
+	case "10": 
+		return "Octuble";
+	break;
+	case "11": 
+		return "Noviembre";
+	break;
+	case "12": 
+		return "Diciembre";
+	break;
+}
+}
+</script>

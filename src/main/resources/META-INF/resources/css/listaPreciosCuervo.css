@@ -7,6 +7,9 @@ table.dataTable tr.group td{
   color: white;
   font-family: "Source Sans Pro";
 }
+#tbl-politicas .header-cuervo th{
+  font-weight: 500 !important;
+}
 #tbl-politicas thead tr th{
   text-align: center;
 }
@@ -34,9 +37,11 @@ table.dataTable tr.group td{
   color: #CCB874 !important;
 }
 #tbl-politicas tbody td {
-  border-top: .5px solid #808080;
+  border-top: none;
+  border-bottom: .3px solid #333333;
   padding: 14px 8px;
 }
+
 #tbl-politicas tbody .td-politicas {
   text-align: center;
 }
@@ -48,6 +53,8 @@ table.dataTable tr.group td{
 }
 #tbl-politicas .name-product{
   color: #CCB874;
+  text-transform: capitalize;
+  font-size: 1em;
 }
 
 #tbl-politicas tbody .collapsed td {
@@ -57,16 +64,17 @@ table.dataTable tr.group td{
 }
 
 #tbl-politicas tr td .head {
-    border: 1px solid;
+    border: .3px solid;
     margin: 1px;
     padding: 7px 16px;
+    font-size: 1.1em;
 }
 #listaPrecios {
 	background: transparent;
 }
 .boton-listaPrecios{
-	margin-top: 2rem;
-    margin-bottom: 2rem;
+	margin-top: 3rem;
+    margin-bottom: 3rem;
     padding: 5px 25px;
     background: transparent;
     color: #CCB874;
@@ -74,3 +82,14 @@ table.dataTable tr.group td{
     float: right;
     margin-right: 1.1rem;
 }
+#fecha{
+	position: absolute;
+    color: white;
+    left: auto;
+    top: auto;
+    bottom: -4px;
+    font-weight: 500;
+    background: black;
+    padding: 1px 12px 2px;
+}
+    

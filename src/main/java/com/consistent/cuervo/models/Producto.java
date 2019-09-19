@@ -73,6 +73,16 @@ public class Producto {
 	public void setJson(String json) {
 		this.json = json;
 	}
+	public Producto() {
+		this.category = "";
+		this.nombre = "";
+		this.material = "";
+		this.descripcion = "";
+		this.capacidad = "";
+		this.precioNormal = "";
+		this.precioBanquete = "";
+		this.precioEspecial = "";
+	}
 	public Producto(String category, String nombre, String material, String descripcion, String capacidad,
 			String precioNormal, String precioBanquete, String precioEspecial) {
 		super();

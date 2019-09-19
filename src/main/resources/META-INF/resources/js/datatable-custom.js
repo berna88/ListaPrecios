@@ -10,8 +10,12 @@ $(document).ready(function() {
     	      order: [[2, 'asc']],
     	      columnDefs: [
     	            {
+    	            	"width": "100px",
+    	                "targets": [ 0 ]
+    	            },
+    	            {
     	                "targets": [ 2 ],
-    	                "visible": false,
+    	                "visible":false,
     	                "searchable": false
     	            }
     	        ],
