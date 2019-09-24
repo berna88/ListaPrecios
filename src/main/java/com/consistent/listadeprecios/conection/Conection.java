@@ -1,4 +1,4 @@
-package com.consistent.cuervo.conection;
+package com.consistent.listadeprecios.conection;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;

@@ -1,8 +1,8 @@
-package com.consistent.cuervo.portlet;
+package com.consistent.listadeprecios.portlet;
 
-import com.consistent.cuervo.conection.Conection;
-import com.consistent.cuervo.constants.ServiceListaPreciosPortletKeys;
-import com.consistent.cuervo.models.Producto;
+import com.consistent.listadeprecios.conection.Conection;
+import com.consistent.listadeprecios.constants.ServiceListaPreciosPortletKeys;
+import com.consistent.listadeprecios.models.Producto;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
@@ -27,7 +27,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {
-		"com.liferay.portlet.display-category=category.sample",
+		"com.liferay.portlet.display-category=category.ListaDePrecios",
 		"com.liferay.portlet.instanceable=true",
 		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp",
