@@ -92,4 +92,20 @@ table.dataTable tr.group td{
     background: black;
     padding: 1px 12px 2px;
 }
+
+
+.rotate {
+	float: right;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+.collapsed i.rotate{
+	 -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+
+
     
