@@ -48,7 +48,7 @@
         <tbody>
         	<c:forEach var="nom" items="${Productos}">
 	        	<tr>
-	                <td class="td-politicas"><h5 class="name-product"><c:out value="${nom.nombre.toUpperCase()}"></c:out></h5><c:out value="${nom.material}"></c:out></td>
+	                <td class="td-politicas"><h5 class="name-product"><c:out value="${nom.nombre}"></c:out></h5><c:out value="${nom.material}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.descripcion}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.category}"></c:out></td>
 	                <td class="td-politicas top"><c:out value="${nom.capacidad}"></c:out></td>

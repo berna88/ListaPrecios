@@ -108,6 +108,7 @@ public class Conection {
 			return response.toString();
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
+			log.error("MalformedURLException: "+e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
