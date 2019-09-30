@@ -1,4 +1,4 @@
-package com.consistent.cuervo.constants;
+package com.consistent.listadeprecios.constants;
 
 /**
  * @author bernardohernadez

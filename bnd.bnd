@@ -1,7 +1,7 @@
 Bundle-Name: ListaPrecios
-Bundle-SymbolicName: com.consistent.cuervo
+Bundle-SymbolicName: com.consistent.listadeprecios
 Bundle-Version: 1.0.0
-Export-Package: com.consistent.cuervo.constants
+Export-Package: com.consistent.listadeprecios.constants
 Bundle-ClassPath:\
 .,\
 lib/gson.jar,\

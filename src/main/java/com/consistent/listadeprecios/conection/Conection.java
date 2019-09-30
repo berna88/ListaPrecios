@@ -1,4 +1,4 @@
-package com.consistent.cuervo.conection;
+package com.consistent.listadeprecios.conection;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -82,16 +82,21 @@ public class Conection {
             return token; 
 		} catch (OAuthSystemException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.getMessage();
+			return "";
+			//e.printStackTrace();
 		} catch (OAuthProblemException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
+			e.getMessage();
+			return "";
 		}
-		return "";
+		//return "";
 	}
 	
 	public String getJSON() {
 		try {
+			log.info("getJSON ");
 			final ThemeDisplay themeDisplay = (ThemeDisplay) request.getAttribute(WebKeys.THEME_DISPLAY);
 			URL url = new URL(themeDisplay.getPortalURL()+"/o/listaPrecios/obtenerListaDePrecio");
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
