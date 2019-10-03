@@ -23,7 +23,7 @@ import org.osgi.service.component.annotations.Component;
 
 /**
  * @author bernardohernadez
- */
+ */ 
 @Component(
 	immediate = true,
 	property = {
