@@ -64,9 +64,7 @@
 			</c:forEach>
         </tbody>
     </table>
-    
-    <!-- <a href="javascript:callme()">Descargar</a> -->
-    
+        
     </div>
     </div>
 </div>
@@ -78,10 +76,10 @@
 <script src='<%=request.getContextPath()+"/js/dataTables.buttons.js" %>'></script>
 <script src='<%=request.getContextPath()+"/js/datatable-custom.js" %>'></script>
 <!--  <script src='<%=request.getContextPath()+"/js/jspdf.js" %>'></script>-->
+  <script src='<%=request.getContextPath()+"/js/jspdf.debug.js" %>'></script>
+   <script src='<%=request.getContextPath()+"/js/jspdf.plugin.autotable.js" %>'></script>
+   
 
-<script src="http://www.cuervo.consistent.com.mx:8080/documents/160885/161050/jspdf.debug.js/d3762135-f3f9-3996-0135-5adddc2e8b1f?t=1569967375732"></script>
-
-<script src="http://www.cuervo.consistent.com.mx:8080/documents/160885/161050/jspdf.plugin.autotable.js/af149950-58fb-cf08-3c00-90bb2737a7d7?t=1569967376011"></script>
 <script>
 var today = new Date();
 var dia = String(today.getDate()).padStart(2, '0');
