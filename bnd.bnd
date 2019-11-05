@@ -1,7 +1,7 @@
-Bundle-Name: ListaPrecios
-Bundle-SymbolicName: com.consistent.listadeprecios
+Bundle-Name: ListaPreciosPortlet
+Bundle-SymbolicName: com.consistent.listadepreciosPortlet
 Bundle-Version: 1.0.0
-Export-Package: com.consistent.listadeprecios.constants
+Export-Package: com.consistent.listadepreciosPortlet.constants
 Bundle-ClassPath:\
 .,\
 lib/gson.jar,\

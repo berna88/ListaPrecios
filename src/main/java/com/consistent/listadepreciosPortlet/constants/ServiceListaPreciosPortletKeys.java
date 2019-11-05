@@ -1,4 +1,4 @@
-package com.consistent.listadeprecios.constants;
+package com.consistent.listadepreciosPortlet.constants;
 
 /**
  * @author bernardohernadez

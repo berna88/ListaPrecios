@@ -1,4 +1,4 @@
-package com.consistent.listadeprecios.models;
+package com.consistent.listadepreciosPortlet.models;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

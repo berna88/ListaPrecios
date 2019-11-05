@@ -1,4 +1,4 @@
-package com.consistent.listadeprecios.conection;
+package com.consistent.listadepreciosPortlet.conection;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;

@@ -1,8 +1,8 @@
-package com.consistent.listadeprecios.portlet;
+package com.consistent.listadepreciosPortlet.portlet;
 
-import com.consistent.listadeprecios.conection.Conection;
-import com.consistent.listadeprecios.constants.ServiceListaPreciosPortletKeys;
-import com.consistent.listadeprecios.models.Producto;
+import com.consistent.listadepreciosPortlet.conection.Conection;
+import com.consistent.listadepreciosPortlet.constants.ServiceListaPreciosPortletKeys;
+import com.consistent.listadepreciosPortlet.models.Producto;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
