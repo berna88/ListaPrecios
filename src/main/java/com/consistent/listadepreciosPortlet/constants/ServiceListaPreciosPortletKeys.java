@@ -59,5 +59,9 @@ public class ServiceListaPreciosPortletKeys {
 			"   \"precioEspecial\": \"$0.00\"\n" + 
 			" }\n" + 
 			"]";
+	public final static String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver"; 
+	public static String JDBC_CONNECTION = "jdbc:mysql://mx56.hostgator.mx:3306/basicoin_cuervo?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false&serverTimezone=EST5EDT";
+	public static String JDBC_USER = "basicoin_cuervo";
+	public static String JDBC_PASS = "#Cuerv0";
 
 }

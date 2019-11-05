@@ -1,5 +1,8 @@
 package com.consistent.listadepreciosPortlet.conection;
 
+import com.consistent.listadepreciosPortlet.constants.ServiceListaPreciosPortletKeys;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
@@ -11,6 +14,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.portlet.RenderRequest;
 
@@ -120,5 +127,49 @@ public class Conection {
 			e.printStackTrace();
 		}
 		return "";
+	}
+	
+	public String getJSONSQL() {
+		String sql = "select categoria.nb_categoria, producto.nb_producto_comercial, producto.cl_producto_sku, producto.nb_producto_sap , producto.ds_presentacion," + 
+				" IFNULL( (select precio from basicoin_cuerv1.c_producto_lista_precio where id_lista_precio = 1 and id_producto = producto.id_producto) , '$ 00.00')  as precio_normal," + 
+				" IFNULL( (select precio from basicoin_cuerv1.c_producto_lista_precio where id_lista_precio = 2 and id_producto = producto.id_producto) , '$ 00.00') as precio_alzado," + 
+				" IFNULL( (select precio from basicoin_cuerv1.c_producto_lista_precio where id_lista_precio = 3 and id_producto = producto.id_producto) , '$ 00.00') as precio_especial" + 
+				" from basicoin_cuerv1.c_producto producto" + 
+				" inner join basicoin_cuerv1.c_marca marca on marca.id_marca = producto.id_marca" + 
+				" inner join basicoin_cuerv1.c_categoria categoria on categoria.id_categoria = producto.id_categoria" + 
+				" order by nb_categoria desc";
+		String resultado = "";
+		Connection connection = null;
+		Statement statement = null;
+		 log.info(sql);
+		 System.out.println(sql);
+		 try{
+			 Class.forName(ServiceListaPreciosPortletKeys.JDBC_DRIVER);  
+			 connection= DriverManager.getConnection(ServiceListaPreciosPortletKeys.JDBC_CONNECTION,ServiceListaPreciosPortletKeys.JDBC_USER,ServiceListaPreciosPortletKeys.JDBC_PASS);  
+			 statement = connection.createStatement();
+			 ResultSet rs = statement.executeQuery(sql);
+			 JsonArray resultados = new JsonArray();
+			 while(rs.next())  {
+				JsonObject jObject = new JsonObject();
+				jObject.addProperty("category", rs.getString("nb_categoria"));
+				jObject.addProperty("nombre", rs.getString("nb_producto_comercial"));
+				jObject.addProperty("material", rs.getString("cl_producto_sku").replaceFirst("^0+(?!$)", ""));
+				jObject.addProperty("descripcion", rs.getString("nb_producto_sap"));
+				jObject.addProperty("capacidad", rs.getString("ds_presentacion"));
+				jObject.addProperty("precioNormal", rs.getString("precio_normal"));
+				jObject.addProperty("precioBanquete", rs.getString("precio_alzado"));
+				jObject.addProperty("precioEspecial", rs.getString("precio_especial"));
+				
+				resultados.add(jObject);
+				
+			 }
+			 resultado = resultados.toString();
+			 rs.close();
+			 statement.close();
+			 connection.close();
+		 }catch(Exception e){
+			 log.error(e.getMessage());
+		 }
+		return resultado;
 	}
 }

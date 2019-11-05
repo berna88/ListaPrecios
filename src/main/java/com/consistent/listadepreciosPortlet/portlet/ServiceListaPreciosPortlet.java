@@ -6,8 +6,6 @@ import com.consistent.listadepreciosPortlet.models.Producto;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
-import com.liferay.portal.kernel.theme.ThemeDisplay;
-import com.liferay.portal.kernel.util.WebKeys;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -59,7 +57,7 @@ public class ServiceListaPreciosPortlet extends MVCPortlet {
 		log.info("<--- render --->");
 			try {
 				Conection conection = new Conection(ServiceListaPreciosPortletKeys.CLIENT_ID, ServiceListaPreciosPortletKeys.CLIENT_SECRET, renderRequest);
-				Producto producto = new Producto(conection.getJSON());
+				Producto producto = new Producto(conection.getJSONSQL());
 				renderRequest.setAttribute("Productos", producto.getProductos());
 			} catch (Exception e) {
 				// TODO: handle exception
