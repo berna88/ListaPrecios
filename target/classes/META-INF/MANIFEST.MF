@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: com.consistent.listadepreciosPortlet
 Built-By: bernardohernandez
-Bnd-LastModified: 1572999294205
+Bnd-LastModified: 1573000469957
 Bundle-ManifestVersion: 2
 Import-Package: com.consistent.listadepreciosPortlet.constants,com.lif
  eray.portal.kernel.log;version="[7.0,8)",com.liferay.portal.kernel.po

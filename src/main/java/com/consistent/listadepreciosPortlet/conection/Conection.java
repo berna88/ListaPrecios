@@ -142,7 +142,6 @@ public class Conection {
 		Connection connection = null;
 		Statement statement = null;
 		 log.info(sql);
-		 System.out.println(sql);
 		 try{
 			 Class.forName(ServiceListaPreciosPortletKeys.JDBC_DRIVER);  
 			 connection= DriverManager.getConnection(ServiceListaPreciosPortletKeys.JDBC_CONNECTION,ServiceListaPreciosPortletKeys.JDBC_USER,ServiceListaPreciosPortletKeys.JDBC_PASS);  
