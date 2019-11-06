@@ -169,6 +169,7 @@ public class Conection {
 			 connection.close();
 		 }catch(Exception e){
 			 log.error(e.getMessage());
+			 e.printStackTrace();
 		 }
 		return resultado;
 	}

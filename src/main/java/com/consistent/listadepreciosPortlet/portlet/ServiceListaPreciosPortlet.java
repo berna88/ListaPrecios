@@ -57,6 +57,7 @@ public class ServiceListaPreciosPortlet extends MVCPortlet {
 		log.info("<--- render --->");
 			try {
 				Conection conection = new Conection(ServiceListaPreciosPortletKeys.CLIENT_ID, ServiceListaPreciosPortletKeys.CLIENT_SECRET, renderRequest);
+				log.info(conection.getJSONSQL());
 				Producto producto = new Producto(conection.getJSONSQL());
 				renderRequest.setAttribute("Productos", producto.getProductos());
 			} catch (Exception e) {
