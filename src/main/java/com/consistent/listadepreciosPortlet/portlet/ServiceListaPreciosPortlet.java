@@ -45,6 +45,11 @@ public class ServiceListaPreciosPortlet extends MVCPortlet {
 	
 	private static Log log = LogFactoryUtil.getLog(ServiceListaPreciosPortlet.class.getName());
 	
+	private final static String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+	private static String JDBC_CONNECTION = "jdbc:mysql://mx56.hostgator.mx:3306/basicoin_cuervo?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false&serverTimezone=EST5EDT";
+	private static String JDBC_USER = "basicoin_cuervo";
+	private static String JDBC_PASS = "#Cuerv0";
+	
 	@Override
 		public void serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 				throws IOException, PortletException {
