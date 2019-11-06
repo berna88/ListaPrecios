@@ -16,8 +16,9 @@ import javax.portlet.ResourceResponse;
 
 import org.osgi.service.component.annotations.Component;
 
-import com.consistent.mx.model.Producto;
-import com.consistent.mx.nuevalistaprecios.constants.NuevaListaDePreciosPortletKeys;
+
+import com.consistent.listadepreciosPortlet.constants.ServiceListaPreciosPortletKeys;
+import com.consistent.listadepreciosPortlet.models.Producto;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.liferay.portal.kernel.log.Log;
