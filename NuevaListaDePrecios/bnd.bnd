@@ -1,0 +1,10 @@
+Bundle-Name: NuevaListaDePrecios
+Bundle-SymbolicName: com.consistent.mx.nuevalistaprecios
+Bundle-Version: 1.0.0
+Export-Package: com.consistent.mx.nuevalistaprecios.constants
+Import-Package:*;resolution:=optional
+Bundle-ClassPath:\
+.,\
+lib/gson.jar	
+-includeresource:\
+lib/gson.jar=gson-2.7.jar

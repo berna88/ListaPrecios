@@ -1,0 +1,111 @@
+table.dataTable tr.group td{
+	font-weight:bold;
+	background-color:#e0e0e0;
+	}
+#tbl-politicas .header-cuervo{
+  background: #181818;
+  color: white;
+  font-family: "Source Sans Pro";
+}
+#tbl-politicas .header-cuervo th{
+  font-weight: 500 !important;
+}
+#tbl-politicas thead tr th{
+  text-align: center;
+}
+
+#tbl-politicas tbody tr{
+  background: #181818;
+  color: white;
+}
+
+#tbl-politicas .group td {
+    background: #181818 !important;
+    padding: 10px 0px !important;
+    font-size: 16px;
+    color: #CCB874 !important;
+    border-style: none;
+    /* border-color: #808080 !important; */
+    font-family: "Source Sans Pro" !important;
+    text-transform: uppercase;
+    border: none;
+}
+
+
+#tbl-politicas .group td:hover{
+  border-color: #CCB874 !important;
+  color: #CCB874 !important;
+}
+#tbl-politicas tbody td {
+  border-top: none;
+  border-bottom: .3px solid #333333;
+  padding: 14px 8px;
+}
+
+#tbl-politicas tbody .td-politicas {
+  text-align: center;
+}
+#tbl-politicas .icon-politicas{
+  float: right;
+}
+#tbl-politicas .top{
+  padding-top: 54px !important;
+}
+#tbl-politicas .name-product{
+  color: #CCB874;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+
+#tbl-politicas tbody .collapsed td {
+  border-color: #808080;
+  color:#808080 !important;
+  margin: 5%;
+}
+
+#tbl-politicas tr td .head {
+    border: .3px solid;
+    margin: 1px;
+    padding: 7px 16px;
+    font-size: 1.1em;
+}
+#listaPrecios {
+	background: transparent;
+}
+.boton-listaPrecios{
+	margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 5px 25px;
+    background: transparent;
+    color: #CCB874;
+    border-color: #CCB874;
+    float: right;
+    margin-right: 1.1rem;
+}
+#fecha{
+	position: absolute;
+    color: white;
+    left: auto;
+    top: auto;
+    bottom: -4px;
+    font-weight: 500;
+    background: black;
+    padding: 1px 12px 2px;
+}
+
+
+.rotate {
+	float: right;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+.collapsed i.rotate{
+	 -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+
+
+    
