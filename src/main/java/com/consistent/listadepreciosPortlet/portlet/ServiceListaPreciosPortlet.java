@@ -18,7 +18,6 @@ import org.osgi.service.component.annotations.Component;
 
 
 import com.consistent.listadepreciosPortlet.constants.ServiceListaPreciosPortletKeys;
-import com.consistent.listadepreciosPortlet.models.Producto;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.liferay.portal.kernel.log.Log;
@@ -68,7 +67,7 @@ public class ServiceListaPreciosPortlet extends MVCPortlet {
 		log.info("<--- render --->");
 			try {
 				String resultado = obtenerListaDePrecio();
-				Producto producto = new Producto(resultado);
+				com.consistent.listadepreciosPortlet.models.Producto producto = new com.consistent.listadepreciosPortlet.models.Producto(resultado);
 				renderRequest.setAttribute("Productos", producto.getProductos());
 			} catch (Exception e) {
 				// TODO: handle exception
